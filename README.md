@@ -4,26 +4,26 @@ Dépôt contenant 3 sites démonstration pour prospection web à Nantes.
 
 ## Sites
 
-### 1. Salon Saint-Mihiel
+### 1. Coiffeur Vitrine
 **Coiffeur mixte** — One-page moderne, tons neutres + couleur accent verte
 - Style épuré, professionnel
 - Photos Unsplash (hair salon, coiffure)
 - Bouton de réservation Planity (fake)
-- **Dossier:** `saint-mihiel/`
+- **Dossier:** `coiffeur-vitrine/`
 
-### 2. Le Fauteuil
+### 2. Barbier Vitrine
 **Barbier** — Multi-page, style masculin/industriel
 - Tons foncés, cuir et métal
 - Ambiance barbier traditionnelle moderne
 - Photos Unsplash (barber shop)
-- **Dossier:** `le-fauteuil/`
+- **Dossier:** `barbier-vitrine/`
 
-### 3. Artisan Services
+### 3. Artisan Vitrine
 **Plombier / Électricien** — One-page pro
 - Couleurs bleue/orange
 - Sections: Hero, Services, Zone d'intervention, Témoignages, Contact
 - Photos Unsplash (plomberie, outillage) — sans visages
-- **Dossier:** `artisan-services/`
+- **Dossier:** `artisan-vitrine/`
 
 ## Déploiement
 
@@ -36,9 +36,9 @@ Ces sites sont prêts à être déployés sur GitHub Pages.
 3. Activer GitHub Pages dans Settings → Pages → Source: main
 
 Chaque dossier sera accessible via:
-- `https://gougoule1.github.io/nantes-portfolio/saint-mihiel/`
-- `https://gougoule1.github.io/nantes-portfolio/le-fauteuil/`
-- `https://gougoule1.github.io/nantes-portfolio/artisan-services/`
+- `https://gougoule1.github.io/nantes-portfolio/coiffeur-vitrine/`
+- `https://gougoule1.github.io/nantes-portfolio/barbier-vitrine/`
+- `https://gougoule1.github.io/nantes-portfolio/artisan-vitrine/`
 
 ### Netlify
 
