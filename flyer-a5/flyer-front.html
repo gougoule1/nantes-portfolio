@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flyer A5 Face Avant — Sites Vitrines Nantes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================
+       PRINT-READY A5 FLYER — FACE AVANT
+       Format: 148 x 210 mm | 300 DPI ready
+       ============================================ */
+
+    @page {
+      size: 148mm 210mm;
+      margin: 0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    body {
+      font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+      background: #ffffff;
+      width: 148mm;
+      height: 210mm;
+      overflow: hidden;
+      color: #1a1a1a;
+    }
+
+    .page {
+      width: 148mm;
+      height: 210mm;
+      display: flex;
+      flex-direction: column;
+      padding: 10mm 10mm 8mm 10mm;
+      background: #ffffff;
+      border: 1pt solid #d0d0d0;
+    }
+
+    /* ---- HEADER ---- */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 6mm;
+      border-bottom: 1.5pt solid #1a1a1a;
+      margin-bottom: 5mm;
+    }
+
+    .logo-area {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-icon {
+      width: 10mm;
+      height: 10mm;
+      background: #1a1a1a;
+      border-radius: 2mm;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2mm;
+    }
+
+    .logo-icon svg {
+      width: 6mm;
+      height: 6mm;
+      fill: #ffffff;
+    }
+
+    .brand {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 11pt;
+      font-weight: 800;
+      letter-spacing: -0.3pt;
+      line-height: 1.1;
+      color: #1a1a1a;
+    }
+
+    .tagline {
+      font-size: 5.5pt;
+      font-weight: 500;
+      color: #555555;
+      letter-spacing: 0.5pt;
+      text-transform: uppercase;
+      margin-top: 1mm;
+    }
+
+    .city-badge {
+      display: flex;
+      align-items: center;
+      gap: 1.5mm;
+    }
+
+    .city-badge .dot {
+      width: 2.5mm;
+      height: 2.5mm;
+      border-radius: 50%;
+      background: #1a1a1a;
+    }
+
+    .city-badge span {
+      font-size: 6.5pt;
+      font-weight: 700;
+      letter-spacing: 1.5pt;
+      text-transform: uppercase;
+      color: #1a1a1a;
+    }
+
+    /* ---- THUMBNAILS ---- */
+    .sites-section {
+      margin-bottom: 5mm;
+    }
+
+    .sites-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2.5mm;
+      margin-bottom: 3mm;
+    }
+
+    .site-card {
+      border: 0.75pt solid #cccccc;
+      border-radius: 1.5mm;
+      overflow: hidden;
+      break-inside: avoid;
+    }
+
+    .site-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: grayscale(15%) contrast(1.05);
+    }
+
+    .site-label {
+      padding: 1.5mm 2mm;
+      background: #f5f5f5;
+      border-top: 0.5pt solid #dddddd;
+    }
+
+    .site-name {
+      font-size: 5.5pt;
+      font-weight: 700;
+      color: #1a1a1a;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.3pt;
+    }
+
+    .site-type {
+      font-size: 4.5pt;
+      color: #777777;
+      text-align: center;
+      font-weight: 400;
+      margin-top: 0.3mm;
+    }
+
+    /* ---- QR + PORTFOLIO ---- */
+    .portfolio-strip {
+      display: flex;
+      align-items: center;
+      gap: 4mm;
+      padding: 3mm 4mm;
+      background: #f8f8f8;
+      border: 0.75pt solid #e0e0e0;
+      border-radius: 2mm;
+      margin-bottom: 5mm;
+    }
+
+    .qr-wrapper {
+      flex-shrink: 0;
+      width: 22mm;
+      height: 22mm;
+      border: 0.5pt solid #cccccc;
+      padding: 1mm;
+      background: #ffffff;
+      border-radius: 1mm;
+    }
+
+    .qr-wrapper img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .portfolio-text {
+      flex: 1;
+    }
+
+    .portfolio-title {
+      font-size: 7pt;
+      font-weight: 800;
+      color: #1a1a1a;
+      text-transform: uppercase;
+      letter-spacing: 0.5pt;
+      margin-bottom: 1mm;
+    }
+
+    .portfolio-url {
+      font-size: 6pt;
+      color: #555555;
+      font-weight: 400;
+      word-break: break-all;
+      line-height: 1.4;
+    }
+
+    .portfolio-url strong {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+
+    .portfolio-hint {
+      font-size: 5pt;
+      color: #999999;
+      margin-top: 1mm;
+      font-style: italic;
+    }
+
+    /* ---- PRICING ---- */
+    .pricing-section {
+      margin-bottom: 5mm;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 10pt;
+      font-weight: 700;
+      color: #1a1a1a;
+      letter-spacing: -0.2pt;
+      margin-bottom: 3mm;
+      padding-bottom: 1.5mm;
+      border-bottom: 1.5pt solid #1a1a1a;
+    }
+
+    .plans {
+      display: flex;
+      flex-direction: column;
+      gap: 2mm;
+    }
+
+    .plan {
+      display: flex;
+      align-items: center;
+      gap: 3mm;
+      padding: 2.5mm 3mm;
+      border: 0.75pt solid #d0d0d0;
+      border-radius: 1.5mm;
+      break-inside: avoid;
+    }
+
+    .plan.featured {
+      background: #1a1a1a;
+      border-color: #1a1a1a;
+    }
+
+    .plan-check {
+      width: 4mm;
+      height: 4mm;
+      border-radius: 50%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .plan-check svg {
+      width: 2.5mm;
+      height: 2.5mm;
+    }
+
+    .plan:not(.featured) .plan-check {
+      background: #1a1a1a;
+    }
+
+    .plan:not(.featured) .plan-check svg {
+      fill: #ffffff;
+    }
+
+    .plan.featured .plan-check {
+      background: #ffffff;
+    }
+
+    .plan.featured .plan-check svg {
+      fill: #1a1a1a;
+    }
+
+    .plan-info {
+      flex: 1;
+    }
+
+    .plan-name {
+      font-size: 6.5pt;
+      font-weight: 700;
+      color: #1a1a1a;
+      line-height: 1.2;
+    }
+
+    .plan.featured .plan-name {
+      color: #ffffff;
+    }
+
+    .plan-detail {
+      font-size: 5pt;
+      color: #666666;
+      margin-top: 0.3mm;
+    }
+
+    .plan.featured .plan-detail {
+      color: #aaaaaa;
+    }
+
+    .plan-price {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 11pt;
+      font-weight: 700;
+      color: #1a1a1a;
+      flex-shrink: 0;
+    }
+
+    .plan.featured .plan-price {
+      color: #ffffff;
+    }
+
+    /* ---- EXTRAS ---- */
+    .extras {
+      display: flex;
+      gap: 3mm;
+      margin-bottom: 4mm;
+    }
+
+    .extra {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 1.5mm;
+      padding: 2mm 2.5mm;
+      background: #f5f5f5;
+      border-radius: 1.5mm;
+    }
+
+    .extra-icon {
+      width: 3mm;
+      height: 3mm;
+      flex-shrink: 0;
+    }
+
+    .extra-icon svg {
+      width: 100%;
+      height: 100%;
+      fill: #555555;
+    }
+
+    .extra-text {
+      font-size: 5pt;
+      font-weight: 600;
+      color: #444444;
+      line-height: 1.3;
+    }
+
+    /* ---- CONTACT ---- */
+    .contact-section {
+      margin-top: auto;
+      padding-top: 4mm;
+      border-top: 1.5pt solid #1a1a1a;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1mm;
+    }
+
+    .contact-label {
+      font-size: 5.5pt;
+      font-weight: 700;
+      color: #999999;
+      text-transform: uppercase;
+      letter-spacing: 1pt;
+      margin-bottom: 1mm;
+    }
+
+    .contact-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 10pt;
+      font-weight: 700;
+      color: #1a1a1a;
+    }
+
+    .contact-phone {
+      font-size: 7pt;
+      font-weight: 600;
+      color: #1a1a1a;
+      letter-spacing: 0.3pt;
+    }
+
+    .contact-email {
+      font-size: 6pt;
+      color: #555555;
+      font-weight: 400;
+    }
+
+    .contact-cta {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 1mm;
+    }
+
+    .cta-text {
+      font-size: 5pt;
+      color: #999999;
+      text-align: right;
+      font-style: italic;
+    }
+
+    .nantes-label {
+      font-size: 5.5pt;
+      font-weight: 700;
+      letter-spacing: 1pt;
+      text-transform: uppercase;
+      color: #cccccc;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- HEADER -->
+    <div class="header">
+      <div class="logo-area">
+        <div class="logo-icon">
+          <!-- Globe/web icon -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+          </svg>
+        </div>
+        <div class="brand">WebCraft<br>Nantes</div>
+        <div class="tagline">Sites vitrines pour artisans &amp; commerces</div>
+      </div>
+      <div class="city-badge">
+        <div class="dot"></div>
+        <span>Nantes &amp; environs</span>
+      </div>
+    </div>
+
+    <!-- SITE THUMBNAILS -->
+    <div class="sites-section">
+      <div class="sites-grid">
+        <div class="site-card">
+          <img src="thumb-saint-mihiel.png" alt="Salon Saint-Mihiel - Coiffeur">
+          <div class="site-label">
+            <div class="site-name">Salon Saint-Mihiel</div>
+            <div class="site-type">Coiffeur · One-page</div>
+          </div>
+        </div>
+        <div class="site-card">
+          <img src="thumb-le-fauteuil.png" alt="Le Fauteuil - Barbier">
+          <div class="site-label">
+            <div class="site-name">Le Fauteuil</div>
+            <div class="site-type">Barbier · Multi-pages</div>
+          </div>
+        </div>
+        <div class="site-card">
+          <img src="thumb-artisan-services.png" alt="Artisan Services - Plombier">
+          <div class="site-label">
+            <div class="site-name">Artisan Services</div>
+            <div class="site-type">Plombier · One-page</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- QR + Portfolio link -->
+      <div class="portfolio-strip">
+        <div class="qr-wrapper">
+          <img src="qr-portfolio.png" alt="QR Code vers portfolio démo">
+        </div>
+        <div class="portfolio-text">
+          <div class="portfolio-title">Voir les d&#233;mos en ligne</div>
+          <div class="portfolio-url"><strong>gougoule1.github.io/nantes-portfolio</strong></div>
+          <div class="portfolio-hint">Scannez le QR code ou tapez l'adresse ci-dessus</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRICING -->
+    <div class="pricing-section">
+      <div class="section-title">Offre d&#233;marrage</div>
+      <div class="plans">
+        <div class="plan featured">
+          <div class="plan-check">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          </div>
+          <div class="plan-info">
+            <div class="plan-name">Site vitrine multi-pages + SEO local</div>
+            <div class="plan-detail">Jusqu&#8217;à 5 pages · Optimisation Google · Mobile friendly</div>
+          </div>
+          <div class="plan-price">299&#8202;&#8364;</div>
+        </div>
+        <div class="plan">
+          <div class="plan-check">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          </div>
+          <div class="plan-info">
+            <div class="plan-name">Site vitrine one-page</div>
+            <div class="plan-detail\">Page unique &#183; Id&#233;al pour d&#233;marrer &#183; Mobile friendly</div>
+          </div>
+          <div class="plan-price">149&#8202;&#8364;</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXTRAS -->
+    <div class="extras">
+      <div class="extra">
+        <div class="extra-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+        </div>
+        <div class="extra-text">D&#233;lai<br>5-7 jours</div>
+      </div>
+      <div class="extra">
+        <div class="extra-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
+        </div>
+        <div class="extra-text">H&#233;bergement<br>inclus 1 an</div>
+      </div>
+      <div class="extra">
+        <div class="extra-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
+        </div>
+        <div class="extra-text">Nom de domaine<br>offert la 1&#698;re an</div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="contact-section">
+      <div class="contact-info">
+        <div class="contact-label">Contact</div>
+        <div class="contact-name">Arthur LABALEC</div>
+        <div class="contact-phone">06 95 75 37 08</div>
+        <div class="contact-email">arthur.labalec@gmail.com</div>
+      </div>
+      <div class="contact-cta">
+        <div class="nantes-label">Nantes &#183; 2026</div>
+        <div class="cta-text">Portfolio disponible<br>sur demande</div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
