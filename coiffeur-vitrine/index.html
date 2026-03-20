@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salon Saint-Mihiel | Coiffeur mixte à Nantes</title>
+    <title>Salon Lumière | Coiffeur mixte</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -27,28 +27,32 @@
     <style>
         html { scroll-behavior: smooth; }
         .hero-bg {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                        url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920&q=80');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(135deg, #8B9A7D 0%, #6B7A5D 50%, #4A5A3D 100%);
         }
+        .gallery-img {
+            background: linear-gradient(135deg, #e8e4dc 0%, #d4cfc5 25%, #c9c4ba 50%, #d4cfc5 75%, #e8e4dc 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .gallery-img img { display: none; }
     </style>
 </head>
 <body class="font-sans text-charcoal bg-cream">
+
     <!-- Navigation -->
     <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
-                <a href="#accueil" class="font-serif text-2xl font-bold text-sage">Saint-Mihiel</a>
+                <a href="#accueil" class="font-serif text-2xl font-bold text-sage">Lumière</a>
                 <div class="hidden md:flex space-x-8">
                     <a href="#accueil" class="hover:text-sage transition">Accueil</a>
                     <a href="#prestations" class="hover:text-sage transition">Prestations</a>
                     <a href="#galerie" class="hover:text-sage transition">Galerie</a>
                     <a href="#contact" class="hover:text-sage transition">Contact</a>
                 </div>
-                <a href="https://planity.com/saint-mihiel" target="_blank" 
-                   class="bg-sage text-white px-6 py-2 rounded-full hover:bg-sage/90 transition font-medium">
-                    Prendre RDV
+                <a href="#contact" class="bg-sage text-white px-6 py-2 rounded-full hover:bg-sage/90 transition font-medium">
+                    Nous contacter
                 </a>
             </div>
         </div>
@@ -57,14 +61,13 @@
     <!-- Hero -->
     <section id="accueil" class="hero-bg min-h-screen flex items-center justify-center text-white">
         <div class="text-center px-6">
-            <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6">Salon Saint-Mihiel</h1>
-            <p class="text-xl md:text-2xl mb-8 font-light">Coiffeur mixte • Nantes</p>
+            <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6">Salon Lumière</h1>
+            <p class="text-xl md:text-2xl mb-8 font-light">Coiffeur mixte</p>
             <p class="max-w-2xl mx-auto text-lg mb-10 opacity-90">
                 Un espace dédié à votre beauté. Coupes, colorations, soins — notre équipe vous accueille dans une atmosphère moderne et apaisante.
             </p>
-            <a href="https://planity.com/saint-mihiel" target="_blank"
-               class="inline-block bg-sage text-white px-10 py-4 rounded-full text-lg font-medium hover:bg-sage/90 transition">
-                Réserver sur Planity →
+            <a href="#contact" class="inline-block bg-white text-sage px-10 py-4 rounded-full text-lg font-medium hover:bg-cream transition">
+                Nous contacter →
             </a>
         </div>
     </section>
@@ -133,14 +136,14 @@
             <p class="text-center text-gray-600 mb-16">Découvrez nos réalisations</p>
             
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&h=400&fit=crop" alt="Coupe femme" class="rounded-xl w-full h-64 object-cover hover:opacity-90 transition">
-                <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=400&h=400&fit=crop" alt="Coloration" class="rounded-xl w-full h-64 object-cover hover:opacity-90 transition">
-                <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=400&h=400&fit=crop" alt="Coupe homme" class="rounded-xl w-full h-64 object-cover hover:opacity-90 transition">
-                <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=400&h=400&fit=crop" alt="Brushing" class="rounded-xl w-full h-64 object-cover hover:opacity-90 transition">
-                <img src="https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?w=400&h=400&fit=crop" alt="Salon" class="rounded-xl w-full h-64 object-cover hover:opacity-90 transition">
-                <img src="https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?w=400&h=400&fit=crop" alt="Coiffure" class="rounded-xl w-full h-64 object-cover hover:opacity-90 transition">
-                <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=400&h=400&fit=crop" alt="Soin cheveux" class="rounded-xl w-full h-64 object-cover hover:opacity-90 transition">
-                <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?w=400&h=400&fit=crop" alt="Atelier" class="rounded-xl w-full h-64 object-cover hover:opacity-90 transition">
+                <div class="gallery-img rounded-xl w-full h-64"><svg class="w-16 h-16 text-sage/30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z"/></svg></div>
+                <div class="gallery-img rounded-xl w-full h-64"><svg class="w-16 h-16 text-sage/30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg></div>
+                <div class="gallery-img rounded-xl w-full h-64"><svg class="w-16 h-16 text-sage/30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg></div>
+                <div class="gallery-img rounded-xl w-full h-64"><svg class="w-16 h-16 text-sage/30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div>
+                <div class="gallery-img rounded-xl w-full h-64"><svg class="w-16 h-16 text-sage/30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg></div>
+                <div class="gallery-img rounded-xl w-full h-64"><svg class="w-16 h-16 text-sage/30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg></div>
+                <div class="gallery-img rounded-xl w-full h-64"><svg class="w-16 h-16 text-sage/30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z"/></svg></div>
+                <div class="gallery-img rounded-xl w-full h-64"><svg class="w-16 h-16 text-sage/30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div>
             </div>
         </div>
     </section>
@@ -163,7 +166,7 @@
                             </svg>
                             <div>
                                 <p class="font-medium">Adresse</p>
-                                <p class="opacity-80">12 Rue Saint-Mihiel<br>44000 Nantes</p>
+                                <p class="opacity-80">XX Rue de la Beauté<br>44000 Ville Demo</p>
                             </div>
                         </div>
                         
@@ -183,28 +186,22 @@
                             </svg>
                             <div>
                                 <p class="font-medium">Téléphone</p>
-                                <p class="opacity-80">02 40 XX XX XX</p>
+                                <p class="opacity-80">XX XX XX XX XX</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="bg-white/10 rounded-2xl p-8 backdrop-blur-sm">
-                    <h3 class="font-serif text-2xl font-semibold mb-6">Réserver votre créneau</h3>
-                    <p class="mb-6 opacity-90">Prenez rendez-vous en ligne en quelques clics.</p>
-                    <a href="https://planity.com/saint-mihiel" target="_blank"
-                       class="inline-block bg-white text-sage px-8 py-4 rounded-full font-medium hover:bg-cream transition">
-                        Ouvrir Planity →
+                    <h3 class="font-serif text-2xl font-semibold mb-6">Nous contacter</h3>
+                    <p class="mb-6 opacity-90">Appelez-nous ou passez nous voir pour prendre rendez-vous.</p>
+                    <a href="tel:0000000000" class="inline-block bg-white text-sage px-8 py-4 rounded-full font-medium hover:bg-cream transition">
+                        Appeler →
                     </a>
                     <div class="mt-8 pt-8 border-t border-white/20">
                         <p class="text-sm opacity-80">Retrouvez-nous aussi sur</p>
                         <div class="flex gap-4 mt-4">
-                            <a href="#" class="hover:opacity-80 transition">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                            </a>
-                            <a href="#" class="hover:opacity-80 transition">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
-                            </a>
+                            <span class="text-white/60 text-sm">Réseaux sociaux</span>
                         </div>
                     </div>
                 </div>
@@ -215,9 +212,13 @@
     <!-- Footer -->
     <footer class="bg-charcoal text-white py-8 px-6">
         <div class="max-w-7xl mx-auto text-center">
-            <p class="font-serif text-xl font-semibold mb-2">Salon Saint-Mihiel</p>
-            <p class="text-gray-400">Coiffeur mixte à Nantes • 12 Rue Saint-Mihiel</p>
-            <p class="text-gray-500 text-sm mt-4">© 2026 Salon Saint-Mihiel. Site vitrine démonstration.</p>
+            <p class="font-serif text-xl font-semibold mb-2">Salon Lumière</p>
+            <p class="text-gray-400">⭐ ⭐ ⭐ ⭐ ⭐</p>
+            <div class="mt-6 p-4 bg-red-600/20 border border-red-600/40 rounded-xl max-w-xl mx-auto">
+                <p class="text-red-400 font-bold text-sm">⚠️ DÉMO — Site fictif à des fins d'illustration</p>
+                <p class="text-red-300/70 text-xs mt-1">Ce site a été créé comme démonstration par Arthur LABALEC — Développeur web freelance. Aucun commerce réel n'est présenté.</p>
+            </div>
+            <p class="text-gray-500 text-sm mt-4">© 2026 Salon Lumière. Site vitrine démonstration.</p>
         </div>
     </footer>
 </body>

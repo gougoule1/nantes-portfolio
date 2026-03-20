@@ -10,7 +10,7 @@ flyer-a5/
 ├── flyer-back.html     # Face arrière (verso)
 ├── flyer.pdf           # PDF combiné recto + verso (2 pages A5)
 ├── thumb-*.png         # Miniatures des 3 sites démo
-├── qr-portfolio.png    # QR code vers gougoule1.github.io/nantes-portfolio
+├── qr-portfolio.png    # QR code vers https://artlab.ovh
 └── README.md           # Ce fichier
 ```
 
@@ -18,7 +18,7 @@ flyer-a5/
 
 ### Face avant (flyer-front.html)
 - Logo + titre WebCraft Nantes
-- 3 miniatures des sites démo (Saint-Mihiel, Le Fauteuil, Artisan Services)
+- 3 miniatures des sites démo (Salon Lumière, Barber Club, Artisan Services)
 - QR code pointant vers le portfolio en ligne
 - Tarifs : 149 € (one-page) / 299 € (multi-pages)
 - Délai, hébergement, nom de domaine offerts
@@ -84,14 +84,14 @@ Les deux faces sont pensées pour l'impression noir & blanc :
 ## Screenshots des sites
 Les miniatures ont été générées avec chromium headless :
 ```
-https://gougoule1.github.io/nantes-portfolio/saint-mihiel/
-https://gougoule1.github.io/nantes-portfolio/le-fauteuil/
-https://gougoule1.github.io/nantes-portfolio/artisan-services/
+https://gougoule1.github.io/nantes-portfolio/coiffeur-vitrine/
+https://gougoule1.github.io/nantes-portfolio/barbier-vitrine/
+https://gougoule1.github.io/nantes-portfolio/artisan-vitrine/
 ```
 
 Regénérez-les si les sites changent :
 ```bash
-for site in saint-mihiel le-fauteuil artisan-services; do
+for site in coiffeur-vitrine barbier-vitrine artisan-vitrine; do
   chromium --headless --disable-gpu \
     --screenshot=thumb-${site}.png --window-size=1200,800 \
     "https://gougoule1.github.io/nantes-portfolio/${site}/"
