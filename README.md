@@ -36,9 +36,9 @@ Ces sites sont prêts à être déployés sur GitHub Pages.
 3. Activer GitHub Pages dans Settings → Pages → Source: main
 
 Chaque dossier sera accessible via:
-- `https://username.github.io/repo/saint-mihiel/`
-- `https://username.github.io/repo/le-fauteuil/`
-- `https://username.github.io/repo/artisan-services/`
+- `https://gougoule1.github.io/nantes-portfolio/saint-mihiel/`
+- `https://gougoule1.github.io/nantes-portfolio/le-fauteuil/`
+- `https://gougoule1.github.io/nantes-portfolio/artisan-services/`
 
 ### Netlify
 
