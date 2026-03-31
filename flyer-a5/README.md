@@ -84,17 +84,17 @@ Les deux faces sont pensées pour l'impression noir & blanc :
 ## Screenshots des sites
 Les miniatures ont été générées avec chromium headless :
 ```
-https://gougoule1.github.io/nantes-portfolio/coiffeur-vitrine/
-https://gougoule1.github.io/nantes-portfolio/barbier-vitrine/
-https://gougoule1.github.io/nantes-portfolio/artisan-vitrine/
+https://artlab.ovh/demo/coiffeur/
+https://artlab.ovh/demo/barbier/
+https://artlab.ovh/demo/artisan/
 ```
 
 Regénérez-les si les sites changent :
 ```bash
-for site in coiffeur-vitrine barbier-vitrine artisan-vitrine; do
+for site in coiffeur barbier artisan; do
   chromium --headless --disable-gpu \
     --screenshot=thumb-${site}.png --window-size=1200,800 \
-    "https://gougoule1.github.io/nantes-portfolio/${site}/"
+    "https://artlab.ovh/demo/${site}/"
   # Recadrer : 600x360px center crop
   python3 -c "from PIL import Image; ..."
 done
